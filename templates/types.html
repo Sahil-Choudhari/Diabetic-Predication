@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MGG | Types</title>
+    <link rel="shortcut icon" href="/static/img/weblogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/css/typ.css">
+</head>
+<body>
+    <div class="container">
+    <div class="start">
+        <div class="slogo">
+            <img src="/static/img/weblogo.png" alt="MyGlucoGuide Logo" class="logo-img">
+            <h1 class="brand-title">MyGlucoGuide</h1>
+        </div>
+        <div class="tabs">
+            <div class="tab">
+                <a href="{{ url_for('home')}}">Home</a>
+            </div>
+            <div class="tab">
+                <a href="{{ url_for('types')}}">Types</a>
+            </div>
+            <div class="tab">
+                <a href="{{ url_for('symptoms') }}">Symptoms</a>
+            </div>
+            <div class="tab">
+                <a href="{{ url_for('preven')}}">Prevention</a>
+            </div>
+            <div class="tab">
+                <a href="{{ url_for('predict_page') }}">Predict</a>
+
+            </div>
+        </div>
+    </div>
+    <div class="first">
+        <div class="top">
+            <h1>Types of Diabetes</h1>
+            <p>Understanding the different types of diabetes and how they affect the body</p>
+        </div>
+        <div class="bottom">
+            <div id='f' class="card">
+                <div class="card_top">
+                    <div class="logo">
+                        <img src="/static/img/blueheartline.png" alt="">
+                    </div>
+                    <div class="right">
+                        <div class="right_title">Type 1 Diabetes
+</div>
+                        <p>An autoimmune condition where the body’s immune system attacks insulin-producing cells in the pancreas.</p>
+                    </div>
+                </div>
+
+                <div class="card_mid">
+                    <h1>Key Characteristics</h1>
+                    <ul>
+                        <li>Usually diagnosed in children, teens, and young adults</li>
+                        <li>Body produces little or no insulin</li>
+                        <li>Requires daily insulin therapy</li>
+                        <li>Accounts for 5–10% of diabetes cases</li>
+                        <li>Symptoms can develop quickly over weeks</li>
+                    </ul>
+                </div>
+
+                <div class="card_bottom">
+                    <div class="sub_card">
+                        <h1>Causes & Risk Factors</h1>
+                        <p>The exact cause is unknown, but genetics and environmental factors like viruses may play a role.</p>
+                    </div>
+                    <div class="sub_card">
+                        <h1>Management</h1>
+                        <p>Daily insulin injections or insulin pump, blood sugar monitoring, healthy diet, and regular physical activity.</p>
+                    </div>
+                </div>
+            </div>
+            <div id='s' class="card">
+                <div class="card_top">
+                    <div class="logo">
+                        <img src="/static/img/caution.png" alt="">
+                    </div>
+                    <div class="right">
+                        <div class="right_title">Type 2 Diabetes</div>
+                        <p>A metabolic disorder where the body doesn’t use insulin properly (insulin resistance).</p>
+                    </div>
+                </div>
+
+                <div class="card_mid">
+                    <h1>Key Characteristics</h1>
+                    <ul>
+                        <li>Most common form of diabetes (90–95% of cases)</li>
+                        <li>Usually develops in adults over 45</li>
+                        <li>Increasingly diagnosed in children and teens</li>
+                        <li>Often preventable or can be delayed</li>
+                        <li>May not show symptoms for years</li>
+                    </ul>
+                </div>
+
+                <div class="card_bottom">
+                    <div class="sub_card">
+                        <h1>Causes & Risk Factors</h1>
+                        <p>Lifestyle factors (obesity, physical inactivity), family history, age, and ethnicity are risk factors.</p>
+                    </div>
+                    <div class="sub_card">
+                        <h1>Management</h1>
+                        <p>Healthy eating, regular exercise, weight management, oral medications or insulin if needed, and blood sugar monitoring.</p>
+                    </div>
+                </div>
+            </div>
+            <div id='t'class="card">
+                <div class="card_top">
+                    <div class="logo">
+                        <img src="/static/img/childface.png" alt="">
+                    </div>
+                    <div class="right">
+                        <div class="right_title">Gestational Diabetes</div>
+                        <p>Diabetes that develops during pregnancy in women who didn’t previously have diabetes.</p>
+                    </div>
+                </div>
+
+                <div class="card_mid">
+                    <h1>Key Characteristics</h1>
+                    <ul>
+                        <li>Develops during the second or third trimester</li>
+                        <li>Affects 2–10% of pregnancies in the US</li>
+                        <li>Usually goes away after delivery</li>
+                        <li>Increases risk of Type 2 diabetes later</li>
+                        <li>Can affect baby’s health if not managed</li>
+                    </ul>
+                </div>
+
+                <div class="card_bottom">
+                    <div class="sub_card">
+                        <h1>Causes & Risk Factors</h1>
+                        <p>Hormones from the placenta can block insulin’s action. Extra weight before pregnancy may also play a role.</p>
+                    </div>
+                    <div class="sub_card">
+                        <h1>Management</h1>
+                        <p>Blood sugar monitoring, healthy eating, physical activity, and sometimes insulin or medication.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="second">
+        <h1>Important Note</h1>
+        <p>While these are the main types of diabetes, there are also other less common forms such as monogenic diabetes and diabetes caused by other conditions. If you're experiencing symptoms or have concerns about diabetes, it's essential to consult with a healthcare professional for proper diagnosis and treatment.</p>
+    </div>
+</body>
+</html>

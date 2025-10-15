@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prediction</title>
+  <link rel="icon" type="image/x-icon" href="../static/images/weblogo.png" />
+  <link rel="stylesheet" href="../static/css/pred.css" />
+  
+</head>
+<body>
+  <div class="container">
+    <div class="start">
+        <div class="slogo">
+            <img src="/static/img/weblogo.png" alt="MyGlucoGuide Logo" class="logo-img">
+            <h1 class="brand-title">MyGlucoGuide</h1>
+        </div>
+        <div class="tabs">
+            <div class="tab">
+                <a href="{{ url_for('home')}}">Home</a>
+            </div>
+            <div class="tab">
+                <a href="{{ url_for('types')}}">Types</a>
+            </div>
+            <div class="tab">
+                <a href="{{ url_for('symptoms') }}">Symptoms</a>
+            </div>
+            <div class="tab">
+                <a href="{{ url_for('preven')}}">Prevention</a>
+            </div>
+            <div class="tab">
+                <a href="{{ url_for('predict_page') }}">Predict</a>
+
+            </div>
+        </div>
+    </div>
+  <div class="container">
+    <h1>Check Your Diabetes Risk</h1>
+
+    <!-- FIRST MODEL FORM -->
+    <form id="predictForm" action="{{url_for('predict')}}" method="post">
+      <label>Pregnancies:</label>
+      <input type="number" name="Pregnancies" required>
+
+      <label>Glucose:</label>
+      <input type="number" name="Glucose" required>
+
+      <label>Blood Pressure:</label>
+      <input type="number" name="BloodPressure" required>
+
+      <label>Skin Thickness:</label>
+      <input type="number" name="SkinThickness" required>
+
+      <label>Insulin:</label>
+      <input type="number" name="Insulin" required>
+
+      <label>BMI:</label>
+      <input type="number" step="0.1" name="BMI" required>
+
+      <label>Diabetes Pedigree Function:</label>
+      <input type="number" step="0.01" name="DiabetesPedigreeFunction" required>
+
+      <label>Age:</label>
+      <input type="number" name="Age" required>
+
+      <button type="submit">Predict</button>
+    </form>
+
+    <p id="result"></p>
+
+    <!-- SECOND MODEL FORM -->
+    <form id="typeForm" action="{{url_for('predict_type')}}" method="post">
+
+      <h2>Additional Info for Diabetes Type Detection</h2>
+
+      <label>Age:</label>
+      <input type="number" name="Age" required>
+
+      <label>Gender:</label>
+      <input type="radio" name="Gender" value="1" required> Male
+      <input type="radio" name="Gender" value="0"> Female<br><br>
+
+      <label>Pregnant (if applicable):</label>
+      <input type="number" name="Pregnant" min="0" required>
+
+      <label>BMI:</label>
+      <input type="number" step="0.1" name="BMI" required>
+
+      <label>Family History:</label>
+      <input type="radio" name="FamilyHistory" value="1" required> Yes
+      <input type="radio" name="FamilyHistory" value="0"> No<br><br>
+
+      <label>Fasting Glucose:</label>
+      <input type="number" name="FastingGlucose" required>
+
+      <label>OGTT 0min:</label>
+      <input type="number" name="OGTT_0min" required>
+
+      <label>OGTT 60min:</label>
+      <input type="number" name="OGTT_60min" required>
+
+      <label>OGTT 120min:</label>
+      <input type="number" name="OGTT_120min" required>
+
+      <label>Insulin Level:</label>
+      <input type="number" name="InsulinLevel" required>
+
+      <label>C-Peptide Level:</label>
+      <input type="number" name="CPeptideLevel" required>
+
+      <label>Autoimmune Marker:</label>
+      <input type="radio" name="AutoimmuneMarker" value="1" required> Yes
+      <input type="radio" name="AutoimmuneMarker" value="0"> No<br><br>
+
+      <button type="submit">Predict Diabetes Type</button>
+    </form>
+
+    <p id="typeResult">Result will show here </p>
+  </div>
+
+  <script>
+  const predictForm = document.getElementById("predictForm");
+  const typeForm = document.getElementById("typeForm");
+  const resultP = document.getElementById("result");
+  const typeResultP = document.getElementById("typeResult");
+
+  // ---- FIRST PREDICTION (Check Diabetic or Not) ----
+  predictForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const response = await fetch("{{ url_for('predict') }}", {
+      method: "POST",
+      body: new FormData(predictForm),
+    });
+
+    const result = await response.json();
+
+    if (result.prediction === 1) {
+      resultP.innerText =
+        "You are likely Diabetic. Please provide additional details below for type detection.";
+      typeForm.style.display = "block";
+      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+    } else {
+      resultP.innerText = "Good news! You are not Diabetic.";
+      typeForm.style.display = "none";
+      typeResultP.innerText = "";
+    }
+  });
+
+  // ---- SECOND PREDICTION (Detect Diabetes Type) ----
+  typeForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const response = await fetch("{{ url_for('predict_type') }}", {
+      method: "POST",
+      body: new FormData(typeForm),
+    });
+
+    const result = await response.json();
+
+    let message = "";
+    switch (result.type_prediction) {
+      case 0:
+        message = "Detected: Type 1 Diabetes (Insulin-dependent).";
+        break;
+      case  1:
+        message = "Detected: Type 2 Diabetes (Non-insulin-dependent).";
+        break;
+      case 2:
+        message = "Detected: Gestational Diabetes (During pregnancy).";
+        break;
+      default:
+        message = "Unable to determine diabetes type. Please check your inputs.";
+    }
+
+    typeResultP.innerText = message;
+    typeResultP.style.marginTop = "15px";
+    typeResultP.style.background = "#e6f2f2";
+    typeResultP.style.padding = "12px";
+    typeResultP.style.borderRadius = "8px";
+    typeResultP.style.color = "#347474";
+    typeResultP.style.fontWeight = "600";
+  });
+</script>
+<footer style="text-align:center; padding: 20px; font-size: 0.9rem; color: #666;">
+  <p><strong>Disclaimer:</strong> MyGlucoGuide may make incorrect predictions. Please consult your medical reports and a healthcare professional for confirmation.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prevention</title>
+    <link rel="shortcut icon" href="/static/img/weblogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/css/prev.css">
+</head>
+<body>
+    <div class="container">
+    <div class="start">
+        <div class="slogo">
+            <!-- Logo Image -->
+            <img src="/static/img/weblogo.png" alt="MyGlucoGuide Logo" class="logo-img">
+            <h1>MyGlucoGuide</h1>
+        </div>
+        <div class="tabs">
+            <div class="tab">
+                <a href="{{ url_for('home')}}">Home</a>
+            </div>
+            <div class="tab">
+                <a href="{{ url_for('types')}}">Types</a>
+            </div>
+            <div class="tab">
+                <a href="{{ url_for('symptoms') }}">Symptoms</a>
+            </div>
+            <div class="tab">
+                <a href="{{ url_for('preven')}}">Prevention</a>
+            </div>
+            <div class="tab">
+                <a href="{{ url_for('predict_page') }}">Predict</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="first">
+        <div class="ftitle">Prevention & Management</div>
+        <p id="fp">Take proactive steps to prevent Type 2 diabetes or manage existing diabetes effectively</p>
+        <div class="first_subdiv">
+            <div class="first_top">
+                <div class="flogo">
+                    <img src="/static/img/blueheart.png" alt="">
+                </div>
+                <h1>Prevention is Powerful</h1>
+            </div>
+            <p>Research shows that lifestyle changes can reduce the risk of developing Type 2 diabetes by up to 58%. It's never too late to start making positive changes for your health.
+            </p>
+        </div>
+    </div>
+    <div class="second">
+        <div class="second_title">Key Prevention Steps</div>
+        <div class="second_cards">
+            <div class="card">
+                <div class="top">
+                    <div class="card_logo">
+                        <img src="/static/img/weight.png" alt="">
+                    </div>
+                    <div class="card_right">
+                        <div class="card_top_title">Maintain Healthy Weight</div>
+                        <p>Losing 5 - 7% of body weight can significantly reduce diabetes risk</p>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="card_bottom_title">Practical Tips : </div>
+                    <ul>
+                        <li>Set realistic weight loss goals</li>
+                        <li>Track your progress regularly</li>
+                        <li>Focus on sustainable changes</li>
+                        <li>Celebrate small victories</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card">
+                <div class="top">
+                    <div class="card_logo">
+                        <img src="/static/img/greenheartline.png" alt="">
+                    </div>
+                    <div class="card_right">
+                        <div class="card_top_title">Stay Physically Active</div>
+                        <p>Regular exercise helps control weight and improves insulin sensitivity</p>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="card_bottom_title">Practical Tips : </div>
+                    <ul>
+                        <li>Aim for 150 minutes of moderate activity per week</li>
+                        <li>Include strength training twice weekly</li>
+                        <li>Take regular breaks from sitting</li>
+                        <li>Find activties you enjoy</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card">
+                <div class="top">
+                    <div class="card_logo">
+                        <img src="/static/img/bowl.png" alt="">
+                    </div>
+                    <div class="card_right">
+                        <div class="card_top_title">Eat Healthy Foods</div>
+                        <p>A balanced diet supports blood sugar control and overall health</p>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="card_bottom_title">Practical Tips : </div>
+                    <ul>
+                        <li>Choose whole grains over refined</li>
+                        <li>Eat plenty of fruits and vegetables</li>
+                        <li>Limit sugary drinks and snacks</li>
+                        <li>Control portion sizes</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card">
+                <div class="top">
+                    <div class="card_logo">
+                        <img src="/static/img/moon.png" alt="">
+                    </div>
+                    <div class="card_right">
+                        <div class="card_top_title">Get Quality Sleep</div>
+                        <p>Poor sleep can increase diabetes risk and affect blood sugar</p>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="card_bottom_title">Practical Tips : </div>
+                    <ul>
+                        <li>Aim for 7-9 hours nightly</li>
+                        <li>Maintain consistent sleep schedule</li>
+                        <li>Create a relaxing bedtime routine</li>
+                        <li>Limit screen time before bed</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="third">
+        <div class="thr_title">Dietary Guidelines</div>
+        <div class="third_cards">
+            <div class="thr_card">
+                <h1>Choose More</h1>
+                <ul>
+                    <li>Whole grains (brown rice, quinoa, oats)</li>
+                    <li>Lean proteins (fish, chicken, beans)</li>
+                    <li>Healthy fats (nuts, avocado, olive oil)</li>
+                    <li>Non-starchy vegetables</li>
+                    <li>Fruits in moderation</li>
+                </ul>
+            </div>
+            <div class="thr_card">
+                <h1>Limit</h1>
+                <ul>
+                    <li>Sugary beverages and desserts</li>
+                    <li>Refined carbohydrates (white bread, pasta)</li>
+                    <li>Processed and red meats</li>
+                    <li>Trans fats and saturated fats</li>
+                    <li>High-sodium foods</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="fourth">
+        <div class="fourth_top">
+            <div class="frlogo">
+                <img src="/static/img/pinksteto.png" alt="">
+            </div>
+            <p>Regular Medical Monitoring</p>
+        </div>
+        <p>If you have prediabetes or risk factors for diabetes, regular checkups are essential:</p>
+        <div class="fourth_cards">
+            <div class="fr_card">
+                <h1>Blood Sugar Tests</h1>
+                <p>Get tested annually or as recommended by your doctor</p>
+            </div>
+            <div class="fr_card">
+                <h1>A1C Tests</h1>
+                <p>Monitors average blood sugar over 2-3 months</p>
+            </div>
+            <div class="fr_card">
+                <h1>Blood Pressure</h1>
+                <p>Keep blood pressure below 140/90 mmHg</p>
+            </div>
+            <div class="fr_card">
+                <h1>Cholesterol</h1>
+                <p>Monitor lipid levels regularly</p>
+            </div>
+        </div>
+    </div>
+    <div class="fifth">
+        <h1>Start Today</h1>
+        <p>Small changes can make a big difference. Talk to your healthcare provider about creating a personalized prevention or management plan that works for you.</p>
+    </div>
+</body>
+</html>

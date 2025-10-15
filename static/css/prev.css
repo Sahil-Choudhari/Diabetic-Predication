@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: 750;
+}
+
+.container {
+  width: 100%;
+}
+
+/* Navigation */
+.start {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #155263, #26768d);
+  padding: 0 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+  color: white;
+  font-size: 2rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 1rem;
+}
+
+.tab {
+  padding: 0.6rem 1.2rem;
+  border: 1px solid white;
+  border-radius: 1rem;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.tab:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Section One */
+.first {
+  padding: 3rem 1rem;
+  background-color: #fef7e0;
+  text-align: center;
+}
+
+.ftitle {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+#fp {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: #444;
+}
+
+.first_subdiv {
+  background-color: #2e2ed7;
+  color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.first_top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.first_top h1 {
+  font-size: 1.8rem;
+}
+
+.flogo img {
+  width: 60px;
+}
+
+/* Section Two */
+.second {
+  padding: 3rem 0;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.second_title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.second_cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  width: 90%;
+}
+
+.card {
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card_logo img {
+  width: 50px;
+}
+
+.card_top_title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.card_right p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.card_bottom_title {
+  font-weight: bold;
+  margin-top: 1rem;
+  color: #222;
+}
+
+.card ul {
+  margin-left: 1.2rem;
+  margin-top: 0.5rem;
+  list-style: disc;
+  color: #444;
+}
+
+/* Section Three: Dietary Guidelines */
+.third {
+  padding: 3rem 0;
+  background-color: #f3f6fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thr_title {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+}
+
+.third_cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 85%;
+}
+
+.thr_card {
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.thr_card h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #155263;
+}
+
+/* Section Four: Monitoring */
+.fourth {
+  background-color: #ffffff;
+  padding: 2rem;
+  margin: 3rem 0;
+  width: 70%;
+  border-radius: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.fourth_top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.fourth_top p {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #155263;
+}
+
+.frlogo img {
+  width: 60px;
+}
+
+.fourth_cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.fr_card {
+  background-color: #fdfdfd;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.fr_card h1 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #26768d;
+}
+
+/* Final Section */
+.fifth {
+  padding: 2rem;
+  width: 75%;
+  text-align: center;
+  background-color: #fefefe;
+  border-radius: 1rem;
+  border: 1px solid #ccc;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 3rem;
+}
+
+.fifth h1 {
+  font-size: 2rem;
+  color: #155263;
+  margin-bottom: 1rem;
+}
+
+.fifth p {
+  font-size: 1.1rem;
+  color: #444;
+}
+.slogo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: white;
+}
+
+.logo-img {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+}

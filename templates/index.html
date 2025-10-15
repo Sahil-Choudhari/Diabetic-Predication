@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MGG | Home</title>
+    <link rel="shortcut icon" href="/static/img/weblogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/css/proj.css">
+</head>
+<body>
+    <div class="container">
+    <div class="start">
+        <div class="slogo">
+            <img src="/static/img/weblogo.png" alt="MyGlucoGuide Logo" class="logo-img">
+            <h1 class="brand-title">MyGlucoGuide</h1>
+        </div>
+        <div class="tabs">
+            <div class="tab">
+                <a href="{{ url_for('home')}}">Home</a>
+            </div>
+            <div class="tab">
+                <a href="{{ url_for('types')}}">Types</a>
+            </div>
+            <div class="tab">
+                <a href="{{ url_for('symptoms') }}">Symptoms</a>
+            </div>
+            <div class="tab">
+                <a href="{{ url_for('preven')}}">Prevention</a>
+            </div>
+            <div class="tab">
+                <a href="{{ url_for('predict_page') }}">Predict</a>
+
+            </div>
+        </div>
+    </div>
+
+        <div class="mid">
+            <div class="left">
+                <div class="top">
+                    <div class="title1">Understanding</div>
+                    <div class="title2">Diabetes</div>
+                    <p>Comprehensive information about 
+                        diabetes,its types ,symptoms and how
+                        to manage this condition effectively.
+                    </p>
+                </div>
+                <a href="" class="btn">Learn More</a>
+            </div>
+            <div class="right">
+                <div class="cards">
+                    <div id="first"class="card">
+                        <div class="cardlogo">
+                            <img src="/static/img/blue.jpeg" alt="">
+                        </div>
+                        <div class="cardtitle">463M</div>
+                        <p>adults with diabetes globally</p>
+                    </div>
+                    <div id="second"class="card">
+                        <div id = "green" class="cardlogo">
+                            <img src="/static/img/greenline.jpeg" alt="">
+                        </div>
+                        <div class="cardtitle">90%</div>
+                        <p>Type 2 diabetes cases</p>
+                    </div>
+
+                    <div id="third"class="card">
+                        <div class="cardlogo">
+                            <img src="/static/img/sheild.jpeg" alt="">
+                        </div>
+                        <div class="cardtitle">50%</div>
+                        <p>cases are preventable</p>
+                    </div>
+                    <div id="fourth"class="card">
+                        <div id = "heart" class="cardlogo">
+                            <img src="/static/img/heart.jpeg" alt="">
+                        </div>
+                        <div class="cardtitle">Early</div>
+                        <p>Detection is crucial</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="end">
+            <p>&copy; 2025 Glucoguide Dev Corner</p>
+            <p>Educational resource for diabetes information 
+                and awareness
+            </p>
+
+        </div>
+    </div>
+</body>
+</html>

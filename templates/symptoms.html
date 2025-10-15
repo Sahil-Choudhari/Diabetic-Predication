@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symptoms</title>
+    <link rel="shortcut icon" href="/static/img/weblogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/css/sys.css">
+</head>
+<body>
+
+    <div class="container">
+    <div class="start">
+        <div class="slogo">
+            <img src="/static/img/weblogo.png" alt="MyGlucoGuide Logo" class="logo-img">
+            <h1 class="brand-title">MyGlucoGuide</h1>
+        </div>
+        <div class="tabs">
+            <div class="tab">
+                <a href="{{ url_for('home')}}">Home</a>
+            </div>
+            <div class="tab">
+                <a href="{{ url_for('types')}}">Types</a>
+            </div>
+            <div class="tab">
+                <a href="{{ url_for('symptoms') }}">Symptoms</a>
+            </div>
+            <div class="tab">
+                <a href="{{ url_for('preven')}}">Prevention</a>
+            </div>
+            <div class="tab">
+                <a href="{{ url_for('predict_page') }}">Predict</a>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="first_container">
+        <div class="first">
+            <div class="ftitle">Symptoms of Diabetes</div>
+            <p>Recognizing the warning signs can lead to early diagnosis and better health outcomes</p>
+        </div>
+        <div class="third">
+            <div class="cards">
+                <div id="one"class="card">
+                    <div class="logo">
+                        <img src="/static/img/drop.png" alt="">
+                    </div>
+                    <div class="title">Increased Thirst</div>
+                    <p>Feeling unusually thirsty and needing to drink more fluids than normal</p>
+                </div>
+                <div id="two"class="card">
+                    <div class="logo">
+                        <img src="/static/img/heartline.png" alt="">
+                    </div>
+                    <div class="title">Frequent Urination</div>
+                    <p>Needing to urinate more often than usual, especially at night</p>
+                </div>
+                <div id="three"class="card">
+                    <div class="logo">
+                        <img src="/static/img/brain.png" alt="">
+                    </div>
+                    <div class="title">Fatigue</div>
+                    <p>Feeling tired and lacking energy despite adequate rest</p>
+                </div>
+                <div id="four"class="card">
+                    <div class="logo">
+                        <img src="/static/img/eye.png" alt="">
+                    </div>
+                    <div class="title">Blurred Vision</div>
+                    <p>Vision problems or changes in eyesight</p>
+                </div>
+                <div id="five"class="card">
+                    <div class="logo">
+                        <img src="/static/img/greenheart.png" alt="">
+                    </div>
+                    <div class="title">Slow Healing</div>
+                    <p>Cuts and wounds that take longer than normal to heal</p>
+                </div>
+                <div id="six"class="card">
+                    <div class="logo">
+                        <img src="/static/img/clock.png" alt="">
+                    </div>
+                    <div class="title">Unexplained Weight Loss</div>
+                    <p>Losing weight without trying or changing diet</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="second_container">
+        <div class="fourth">
+        <div class="fourth_card">
+            <div class="frlogo">
+                <img src="/static/img/bluehl.png" alt="">
+            </div>
+            <div class="fourth_title">Type 1 Diabetes</div>
+            <ul>
+                <li>Sudden, noticeable symptoms</li>
+            <li>Extreme thirst and hunger</li>
+            <li>Rapid weight loss despite eating</li>
+            <li>Bedwetting in children who were dry</li>
+            </ul>
+        </div>
+        <div class="fourth_card">
+            <div class="frlogo">
+                <img src="/static/img/ste.png" alt="">
+            </div>
+            <div class="fourth_title">Type 2 Diabetes</div>
+            <ul>
+                <li>May have no symptoms for years</li>
+            <li>Gradual onset of symptoms</li>
+            <li>Tingling or numbness in hands/feet</li>
+            <li>Frequent infections</li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    <div class="fifth">
+        <div class="fifth_title">⚠️ Emergency Symptoms (Seek Immediate Medical Attention)</div>
+        <p>These symptoms may indicate diabetic ketoacidosis (DKA) or hyperosmolar hyperglycemic state (HHS), which are medical emergencies:</p>
+        <div class="fifth_cards">
+            <div class="long_card">⚠️ Fruity-smelling breath</div>
+            <div class="long_card">⚠️ Nausea and vomiting</div>
+            <div class="long_card">⚠️ Shortness of breath</div>
+            <div class="long_card">⚠️ Dry mouth</div>
+            <div class="long_card">⚠️ Weakness or fatigue</div>
+            <div class="long_card">⚠️ Confusion or difficulty concentrating</div>
+            <div class="long_card">⚠️ Abdominal pain</div>
+            <div class="long_card">⚠️ Loss of consciousness</div>
+        </div>
+    </div>
+    <div class="sixth">
+        <div class="six_title">When to See a Doctor</div>
+        <p>If you notice any of these symptoms, especially if they persist or worsen, consult your healthcare provider. Early detection and treatment can prevent serious complications.</p>
+    </div>
+    <div class="seventh"></div>
+</body>
+</html>

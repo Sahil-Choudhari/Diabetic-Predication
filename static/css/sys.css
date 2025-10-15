@@ -1,0 +1,499 @@
+*{
+    margin : 0%;
+    padding : 0%;
+    box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  display : flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.start{
+    width : 100%;
+    height : 9.5vh;
+    border : 1px solid black;
+    display : flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #155263; 
+    position: relative; /* or absolute/fixed */
+    z-index: 2; /* higher layer */
+}
+.slogo{
+    color : white;
+    width : 12%;
+    height : 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tabs{
+    width : 40%;
+    height : 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.tab{
+    width : 15%;
+    height : 95%;
+    border : 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.8rem;
+    color: white;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+.tab:hover{
+    transform: scale(1.1);
+    background-color: #26768d;
+}
+a{
+    text-decoration: none;
+    color : white;
+    font-weight: 750;
+}
+.first_container{
+    width : 100%;
+    height : 100vh;
+    display : flex;
+    flex-direction : column;
+    justify-content : center;
+    align-items : center;
+    background-color : #F5F5F5;
+}
+
+#one{
+    animation: one 1.5s;
+}
+#two{
+    animation: two 1.5s;
+}
+#three{
+    animation: three 1.5s;
+}
+#four{
+    animation: four 1.5s;
+}
+#five{
+    animation: five 1.5s;
+}
+#six{
+    animation: six 1.5s;
+}
+@keyframes one{
+    0%{
+        transform: translate(-100%,-100%) ;
+    }
+    100%{
+        transform: translate(0,0);
+    }
+}
+
+@keyframes two {
+    0%{
+        transform: translateY(-100%) ;
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes three{
+    0%{
+        transform: translate(+100%,-100%) ;
+    }
+    100%{
+        transform: translate(0,0);
+    }
+}
+
+@keyframes four{
+    0%{
+        transform: translate(-100%,+100%) ;
+    }
+    100%{
+        transform: translate(0);
+    }
+}
+@keyframes five{
+    0%{
+        transform: translateY(+100%) ;
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes six {
+    0%{
+        transform: translate(+100%,+100%) ;
+    }
+    100%{
+        transform: translate(0,0);
+    }
+}
+.first{
+    width : 90%;
+    height : 20%;
+  
+    display : flex;
+    flex-direction : column;
+    justify-content : center;
+    align-items : center;
+    text-align: center;
+    animation: two 1.5s;
+    position: relative; /* or absolute/fixed */
+    z-index: 1; /* higher layer */
+}
+.third{
+    width : 90%;
+    height : 80%;
+    
+    display : flex;
+    justify-content : center;
+    align-items : center;
+}
+.ftitle{
+    width : 70%;
+    height : 60%;
+    font-size : 3.5rem;
+    font-weight: 700;
+}
+.first p{
+    font-size : 1.5rem;
+    font-weight: 500;
+}
+.cards{
+    width : 90%;
+    height : 90%;
+   
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    place-items: center;
+}
+.card{
+    width : 90%;
+    height : 90%;
+    border : 1px solid black;
+    padding-left : 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    box-shadow: 0.2rem 0.2rem 0.2rem grey;
+    border-radius: 1.5rem;
+}
+.logo{
+     width : 25%;
+    height : 35%;
+
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0.2rem 0.2rem 0.2rem;
+}
+.title{
+    width : 80%;
+    height : 20%;
+  
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size : 1.4rem;
+    font-weight: 600;
+}
+.card p{
+    width : 95%;
+    height : 20%;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size : 1rem;
+    font-weight: 600;
+}
+.card img{
+    width : 100%;
+    height : 100%;
+    object-fit: cover;
+}
+
+.second_container{
+    width : 100%;
+    height : 50vh;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fourth{
+    width : 90%;
+    height : 90%;
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.fourth_card ul {
+  list-style-type: disc !important;   /* ensures dots appear */
+  list-style-position: inside;        /* keeps dots visible inside box */
+  margin: 2px 0 0 3px;              /* space on left for dots */
+  padding: 0;
+}
+
+.fourth_card li {
+  display: list-item !important;      /* restores default bullet behavior */
+  margin-bottom: 6px;
+  color: #333;
+  font-size: 0.95rem;
+  
+  font-size : 1.5rem;
+}
+
+.fourth_card{
+    display : flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    width : 45%;
+    height : 90%;
+    border : 1px solid black;
+    padding-left : 3%;
+    border-radius: 1.5rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem gray;
+}
+.frlogo{
+    width : 15%;
+    height : 29%;
+  
+    border-radius : 1.5rem;
+    overflow: hidden;
+    box-shadow: 0.2rem 0.2rem 0.2rem;
+}
+.fourth_title{
+    font-size : 2rem; 
+    font-weight: 600;
+}
+
+.fourth_card img{
+    width : 100%;
+    height : 100%;
+    object-fit: cover;
+}
+
+.fifth{
+    width : 90%;
+    height : 70vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color : #ff4b4b;
+    padding : 2rem;
+    border-radius : 1rem;
+    color : white;
+}
+.fifth_cards{
+    width : 90%;
+    height : 70%;
+    
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    place-items: center;
+    border-radius: 1rem;
+}
+.long_card{
+    width : 95%;
+    height : 50%;
+    
+    font-size : 1.5rem;
+    border-radius: 0.5rem;
+    background-color: rgb(238, 100, 100);
+}
+.fifth_title{
+    font-size : 2rem;
+}
+
+.sixth{
+    width : 100%;
+    height : 30vh;
+    display : flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color : gainsboro;
+    padding : 2rem;
+    margin-top : 2rem;
+}
+.six_title{
+    font-size : 3rem;
+}
+.sixth p{
+    font-size : 1.5rem;
+    font-weight: 500;
+    text-align: center;
+}
+.slogo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: white;
+}
+
+.logo-img {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+}
+/* --- Navbar Logo + Title Styling --- */
+.slogo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: white;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
+.brand-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: white;
+    text-shadow: 0.5px 0.5px #00000030;
+}
+
+/* --- Nav Tabs --- */
+.tab {
+    width: auto;
+    padding: 0.5rem 1rem;
+    border-radius: 0.8rem;
+    font-size: 1rem;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.tab:hover {
+    transform: translateY(-2px) scale(1.05);
+    background-color: #1e6a7f;
+}
+
+.tab a {
+    font-weight: 600;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+/* --- Section Title Enhancements --- */
+.ftitle {
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-shadow: 0.5px 0.5px 1px #ccc;
+    margin-bottom: 1rem;
+}
+
+.first p {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #333;
+}
+
+/* --- Card Hover Effects & Shadow --- */
+.card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Fourth Section Improvements --- */
+.fourth_card {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fourth_card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* --- Emergency Section --- */
+.fifth {
+    background: #d93636;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.long_card {
+    padding: 0.8rem 1rem;
+    color: white;
+    background-color: rgb(228, 76, 76);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.long_card:hover {
+    transform: scale(1.02);
+}
+
+/* --- When to See a Doctor Section --- */
+.sixth {
+    background-color: #e9ecef;
+    border-top: 2px solid #ccc;
+}
+
+.six_title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #222;
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 768px) {
+    .tabs {
+        width: 90%;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .card, .fourth_card {
+        width: 90%;
+    }
+
+    .cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .fifth_cards {
+        grid-template-columns: 1fr;
+    }
+
+    .start {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem 0;
+    }
+
+    .slogo {
+        justify-content: center;
+        height: auto;
+    }
+
+    .fifth {
+        height: auto;
+    }
+}
