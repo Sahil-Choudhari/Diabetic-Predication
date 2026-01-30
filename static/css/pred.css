@@ -147,6 +147,9 @@ footer {
   padding: 20px;
   font-size: 0.9rem;
   color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #f0fafa;
   position: fixed;
   width: 100%;
@@ -177,3 +180,26 @@ footer {
     font-size: 0.95rem;
   }
 }
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  width: 100vh;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0fafa;
+  position: fixed;
+  
+  bottom: 0;
+}
+
+footer p {
+  max-width: 600px;
+  text-align: center;
+  margin: 0;
+  line-height: 1.5;
+}
+
