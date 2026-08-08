@@ -1,0 +1,85 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+
+# =========================
+# Virtual Environment
+# =========================
+venv/
+env/
+.venv/
+ENV/
+
+# =========================
+# Environment Variables
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Jupyter Notebook
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# ML / Data
+# =========================
+*.csv
+*.xlsx
+*.xls
+*.parquet
+
+# Large trained model files
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.joblib
+*.pt
+*.pth
+*.onnx
+
+# =========================
+# Logs
+# =========================
+*.log
+logs/
+
+# =========================
+# Flask
+# =========================
+instance/
+
+# =========================
+# IDE / Editors
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+# OS Files
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Node.js (if used)
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# =========================
+# Build / Deployment
+# =========================
+dist/
+build/
+.cache/
