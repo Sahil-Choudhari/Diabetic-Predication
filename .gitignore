@@ -83,3 +83,5 @@ pnpm-debug.log*
 dist/
 build/
 .cache/
+__pycache__/
+*.pyc
